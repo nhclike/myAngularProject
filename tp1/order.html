@@ -1,0 +1,46 @@
+<div ng-include="'tp1/header.html'">
+
+</div>
+
+<div class="container">
+    <div class="thumbnail">
+        <div class="caption" ng-show="isorder">
+            <form name="myform">
+                <div class="form-group">
+                    <label class="control-label" for="name">
+                       <b>联系人:</b>
+                    </label>
+                    <input type="text" name="uname" value="" placeholder="旭旭" class="form-control" id="name" ng-model="order.user_name"/>
+                </div>
+                <div class="form-group">
+                    <label for="sex" class="control-label">选择性别</label>
+                    <div id="sex">
+                        <label class="radio-inline">
+                            <input type="radio" name="sex" value="2" ng-model="order.sex"/>先生
+                        </label>
+                        <label class="radio-inline">
+                            <input type="radio" name="sex" value="1" ng-model="order.sex"/>女士
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="control-label" for="tel">联系电话</label>
+                    <input type="tel" name="tel" value="" class="form-control" id="tel" ng-model="order.phone"/>
+                </div>
+                <div class="form-group">
+                    <label class="control-label" for="address">送餐地址</label>
+                    <textarea name="address" rows="3" class="form-control" id="address" ng-model="order.addr"></textarea>
+
+                </div>
+            </form>
+            <button class="btn btn-success btn-block" ng-click="submit()">确认下单</button>
+        </div>
+        <p ng-hide="isorder">{{ordermsg}}</p>
+    </div>
+
+</div>
+
+<div ng-include="'tp1/footer.html'">
+
+</div>

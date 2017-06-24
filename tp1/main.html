@@ -1,0 +1,28 @@
+<div ng-include="'tp1/header.html'">
+
+</div>
+
+<div class="container main">
+    <div class="form-group has-feedback search">
+        <input type="text" class="form-control" placeholder="请输入菜品或者原材料名称" ng-model="kw"/>
+        <span class="glyphicon glyphicon-search form-control-feedback"></span>
+    </div>
+    <div class="list-group">
+        <a href={{"#/detail/"+value.did}} class="list-group-item" ng-repeat="value in dishlist">
+            <div class="media-left media-middle">
+                <img ng-src={{'img/'+value.img_sm}} alt=""/>
+            </div>
+            <div class="media-body">
+                <h3>{{value.name}}</h3>
+                <p>{{value.material}}</p>
+                <p>{{value.price}}</p>
+            </div>
+        </a>
+    </div>
+    <button class="btn btn-success btn-block" ng-click="more()" ng-show="ismore">加载更多</button>
+    <button class="btn btn-danger btn-block" ng-hide="ismore">没有更多</button>
+</div>
+
+<div ng-include="'tp1/footer.html'">
+
+</div>

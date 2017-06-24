@@ -1,0 +1,39 @@
+<div ng-include="'tp1/header.html'">
+
+</div>
+
+<div class="container">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h1 class="text-center">我的订单</h1>
+        </div>
+        <table class="table table-hover table-responsive">
+            <thead>
+                <th>编号</th>
+                <th>菜品</th>
+                <th>下单时间</th>
+                <th>联系人</th>
+            </thead>
+            <tbody>
+                <tr ng-repeat="list in myorder">
+                    <td>{{list.oid}}</td>
+                    <td>
+                        <a href="#/detail/{{list.did}}">
+                            <img src="img/{{list.img_sm}}" alt=""/>
+                        </a>
+                    </td>
+                    <td>
+                        {{list.order_time|date:'yyyy:mm:dd hh:mm:ss'}}
+                    </td>
+                    <td>
+                        {{list.user_name}}
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<div ng-include="'tp1/footer.html'">
+
+</div>

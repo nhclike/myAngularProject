@@ -1,0 +1,48 @@
+
+<div ng-include="'tp1/header.html'"></div>
+<div class="container">
+    <ol class="breadcrumb">
+        <li>
+            <a href="#/start">首页</a>
+        </li>
+        <li>
+            <a href="#" class="active">详情页</a>
+        </li>
+    </ol>
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h1 class="panel-title">
+                [酸甜开胃虾]
+            </h1>
+        </div>
+        <div class="panel-body">
+            <div class="thumbnail">
+                <img ng-src={{"img/"+detail.img_lg}} alt="" class='img-response'/>
+                <div class="caption">
+                    <p>
+                        <b>主要原料:</b>
+                        <span>{{detail.material}}</span>
+                    </p>
+                    <p>
+                        {{detail.detail}}
+                    </p>
+                    <b>{{detail.price|currency:'￥'}}</b>
+                </div>
+            </div>
+        </div>
+        <div class="panel-footer">
+            <div class="text-right">
+                <button type="button" class="btn btn-success" ng-click="jump('/order/'+detail.did)">我要订餐</button>
+                <button type="button" class="btn btn-danger" ng-click="jump('/start')">我再看看</button>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+<div ng-include="'tp1/footer.html'"></div>

@@ -1,0 +1,25 @@
+body{
+    padding-bottom: 300px;
+}
+
+.align-center{
+    position:fixed;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+.container{
+    margin-top: 5.5rem;
+}
+.navbar-footer-menu li{
+    width: 30%;
+}
+.navbar-footer-menu li a{
+    text-align: center;
+    color:#000;
+    font-size:2rem;
+}
+.navbar-footer-menu li a:hover{
+    color:#A0F589;
+}
